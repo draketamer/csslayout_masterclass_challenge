@@ -1,27 +1,17 @@
 
-@keyframes top-slide {
+@keyframes bar-slide {
     0% {
-      
-      transform: translateX(-25%);
-    }
-    50% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(-25%);
-    }
-  }
-  @keyframes bottom-slide {
-    0% {
-      transform: translateX(25%);
-    }
-    50% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(25%);
-    }
-  }
+        transform: translateX(0%); 
+      }
+      50% {
+        transform: translateX(-50%); 
+      }
+      100% {
+        transform: translateX(0%); 
+      }
+      }
+  
+
 
 
 
@@ -47,14 +37,35 @@ border-style: solid;
     border-color: #FD6B3A;  
     border-width: 2px;
     border-style: solid;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    span{
+              font-weight: 600;
+              font-size: 18px;
+              color: #FD6B3A;  
+              position: absolute;
+              width: max-content;
+            }
 &:first-child, &:last-child {
     grid-column: span 3;
+    background-color: white;
+    text-align: center;
+
 }
 
 &:nth-child(6) {
     grid-row: span 2;
 }
 }
+
+.scrolling-text {       
+    animation: bar-slide 40s linear infinite;
+    color: #FD6B3A;  
+}
+
 main {
     margin: 0;
     padding: 4px;
@@ -62,7 +73,20 @@ main {
     border-width: 2px;
     border-style: solid;
     grid-row: span 3;
+    display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+div:first-child{
+    
+    background-size: cover; /* 이미지 크기 조정 */
+    background-position: center; /* 이미지 위치 */
 }
+div:nth-child(2){
+  
+    background-size: cover; /* 이미지 크기 조정 */
+    background-position: center; /* 이미지 위치 */
+}
+  }
 //   .bar {
 //     background-color: white;
 //     position: relative;
