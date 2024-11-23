@@ -2,18 +2,95 @@
 
 body {
   background-color: white;
-  padding: 50px 25px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  height: 100vh;
-  width: 90vw;
-  display: gird;
-  grid-template-columns: 5fr 80px 3fr;
+  height: auto;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1.5fr 40px 0.9fr;
 }
 
 .orange {
   background-color: #ff7400;
-  color: #ff0400;
+  padding: 0 10px 10px 10px;
+  .orange__main {
+    color: #ff0400;
+    border: 0.5px solid #ff0400;
+    display: grid;
+    grid-template-rows: 10px repeat(6, 1fr);
+    .orange__main-header {
+      display: grid;
+      grid-template-columns: 0.1fr 1fr 0.6fr;
+      // border: 0.5px solid #ff0400;
+      div {
+        border: 0.5px solid #ff0400;
+        border-top: none;
+      }
+    }
+    .orange__bar {
+      // border: 0.5px solid #ff0400;
+      height: 15vh;
+      max-height: 100px;
+      display: grid;
+      grid-template-columns: 0.1fr 1fr 0.6fr;
+      grid-template-rows: 1fr 1fr;
+
+      .orange__bar-category {
+        border: 0.5px solid #ff0400;
+
+        grid-row: 1 / span 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        & > span {
+          display: inline-block;
+          rotate: 270deg;
+          transform-origin: center;
+          text-align: center;
+          font-size: 20px;
+        }
+      }
+      .orange__bar-title {
+        border: 0.5px solid #ff0400;
+        grid-row: 1 / span 2;
+        padding-left: 10px;
+        font-size: 60px;
+        font-weight: bold;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+      .orange__bar-subcategory {
+        border: 0.5px solid #ff0400;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+      }
+      .orange__bar-year {
+        border: 0.5px solid #ff0400;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        .orange__bar-year-text {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 90%;
+          width: 97%;
+          border-radius: 15px;
+          background-color: #ff0400;
+          color: #ff7400;
+
+          font-size: 20px;
+        }
+        &:nth-child(2) {
+          border-left: none;
+        }
+      }
+    }
+  }
 }
 
 .slice {
