@@ -17,10 +17,11 @@ body {
     color: #ff0400;
     border: 0.5px solid #ff0400;
     display: grid;
-    grid-template-rows: 10px repeat(6, 1fr);
+    grid-template-rows: minmax(10px, auto) repeat(6, 1fr);
     .orange__main-header {
       display: grid;
       grid-template-columns: 0.1fr 1fr 0.6fr;
+      gap: 0;
       // border: 0.5px solid #ff0400;
       div {
         border: 0.5px solid #ff0400;
@@ -29,11 +30,12 @@ body {
     }
     .orange__bar {
       // border: 0.5px solid #ff0400;
-      height: 15vh;
+      height: 100%;
       max-height: 100px;
       display: grid;
       grid-template-columns: 0.1fr 1fr 0.6fr;
       grid-template-rows: 1fr 1fr;
+      gap: 0;
 
       .orange__bar-category {
         border: 0.5px solid #ff0400;
@@ -85,8 +87,68 @@ body {
 
           font-size: 20px;
         }
-        &:nth-child(2) {
-          border-left: none;
+      }
+      &:nth-child(3) {
+        height: 15vh;
+        max-height: 100px;
+        display: grid;
+        grid-template-columns: 0.1fr 1fr 0.6fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 0;
+        border: 0.5px solid white;
+        .orange__bar-category {
+          border: 0.5px solid white;
+          color: white;
+
+          grid-row: 1 / span 2;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          & > span {
+            display: inline-block;
+            rotate: 270deg;
+            transform-origin: center;
+            text-align: center;
+            font-size: 20px;
+          }
+        }
+        .orange__bar-title {
+          border: 0.5px solid white;
+          grid-row: 1 / span 2;
+          padding-left: 10px;
+          color: white;
+          font-size: 60px;
+          font-weight: bold;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+        }
+        .orange__bar-subcategory {
+          border: 0.5px solid white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: white;
+          font-size: 20px;
+        }
+        .orange__bar-year {
+          border: 0.5px solid white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 10px;
+          .orange__bar-year-text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90%;
+            width: 97%;
+            border-radius: 15px;
+            background-color: white;
+            color: #ff7400;
+
+            font-size: 20px;
+          }
         }
       }
     }
