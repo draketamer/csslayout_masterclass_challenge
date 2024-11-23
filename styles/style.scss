@@ -20,7 +20,7 @@ body {
     grid-template-rows: minmax(10px, auto) repeat(6, 1fr);
     .orange__main-header {
       display: grid;
-      grid-template-columns: 0.1fr 1fr 0.6fr;
+      grid-template-columns: 0.1fr 1.7fr 0.6fr;
       gap: 0;
       // border: 0.5px solid #ff0400;
       div {
@@ -33,7 +33,7 @@ body {
       height: 100%;
       max-height: 100px;
       display: grid;
-      grid-template-columns: 0.1fr 1fr 0.6fr;
+      grid-template-columns: 0.1fr 1.7fr 0.6fr;
       grid-template-rows: 1fr 1fr;
       gap: 0;
 
@@ -55,8 +55,8 @@ body {
       .orange__bar-title {
         border: 0.5px solid #ff0400;
         grid-row: 1 / span 2;
-        padding-left: 10px;
-        font-size: 60px;
+        padding: 5px;
+        font-size: 70px;
         font-weight: bold;
         display: flex;
         justify-content: flex-start;
@@ -150,7 +150,50 @@ body {
 }
 
 .slice {
-  background-color: #ff00ff;
+  color: black;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 0;
+  font-size: 20px;
+  position: relative;
+  width: 40px;
+  overflow: hidden;
+
+  .slice__pink {
+    background-color: #ff00ff;
+    display: flex;
+    flex-direction: column; /* 세로 정렬 */
+    justify-content: center; /* 중앙 정렬 */
+
+    & > span {
+      white-space: nowrap;
+      display: inline-block;
+      transform: rotate(90deg) translateY(75px) translateX(-20px);
+    }
+  }
+  .slice__blue {
+    background-color: #0000ff;
+    display: flex;
+    flex-direction: column; /* 세로 정렬 */
+    justify-content: center; /* 중앙 정렬 */
+
+    & > span {
+      white-space: nowrap;
+      display: inline-block;
+      transform: rotate(270deg) translateY(-80px) translateX(-20px);
+    }
+  }
+  .slice__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: white;
+    font-size: 28px;
+  }
 }
 
 .board {
