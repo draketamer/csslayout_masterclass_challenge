@@ -1,79 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>CSS Challenge</title>
+    <title>CSS Layout Masterclass</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/styles/style.scss" />
   </head>
   <body>
-    <div class="bar" class="top-bar">
-      <span class="scrolling-text">
-        CURRY CAFE! CURRY CAFE! FLEMINGTON & NORTHCOTE! NUMBER ONE BEST QUALITY!
-        VEG & NON. VEG! CURRY CAFE! CURRY CAFE! CURRY CAFE! FLEMINGTON &
-        NORTHCOTE! NUMBER ONE BEST QUALITY! VEG & NON. VEG! CURRY CAFE! CURRY
-        CAFE! CURRY CAFE! FLEMINGTON & NORTHCOTE! NUMBER ONE BEST QUALITY! VEG &
-        NON. VEG! CURRY CAFE! CURRY CAFE! CURRY CAFE! FLEMINGTON & NORTHCOTE!
-        NUMBER ONE BEST QUALITY! VEG & NON. VEG! CURRY CAFE! CURRY CAFE! CURRY
-        CAFE! FLEMINGTON & NORTHCOTE! NUMBER ONE BEST QUALITY! VEG & NON. VEG!
-        CURRY CAFE! CURRY CAFE! CURRY CAFE! FLEMINGTON & NORTHCOTE! NUMBER ONE
-        BEST QUALITY! VEG & NON. VEG! CURRY CAFE! CURRY CAFE! CURRY CAFE!
-        FLEMINGTON & NORTHCOTE! NUMBER ONE BEST QUALITY! VEG & NON. VEG! CURRY
-        CAFE!</span
-      >
+    <div class="phone">
+      <header class="header">
+        <span class="header__btn">⬅️</span>
+        <h1 class="header__title">May Cart</h1>
+        <span class="header__btn">🛒</span>
+      </header>
+      <section class="total">
+        <span class="total__price">$3550</span>
+        <span class="total__subtitle">based on your 5 items.</span>
+      </section>
+      <section class="items">
+        <article class="item">
+          <div class="item__info">
+            <div class="item__info-col">
+              <h2 class="item__title">Pop Temple Print T-Shirt</h2>
+              <h3 class="item__subtitle">limited 2002</h3>
+            </div>
+            <div class="item__info-col">
+              <span class="item__total-price">$1990</span>
+              <div class="item__piece-price">$995 per piece</div>
+            </div>
+          </div>
+          <div class="item__specs">
+            <div class="spec">
+              <span class="spec__title">Size</span>
+              <div class="spec__value">48 - L</div>
+            </div>
+            <div class="spec">
+              <span class="spec__title">QT</span>
+              <div class="spec__value">2 pcs</div>
+            </div>
+          </div>
+          <img
+            src="https://picsum.photos/200/300"
+            alt="random_photo"
+            class="item__photo"
+          />
+        </article>
+        <article class="item">
+          <div class="item__info">
+            <div class="item__info-col">
+              <h2 class="item__title">Pop Temple Print T-Shirt</h2>
+              <h3 class="item__subtitle">limited 2002</h3>
+            </div>
+            <div class="item__info-col">
+              <span class="item__total-price">$1990</span>
+              <div class="item__piece-price">$995 per piece</div>
+            </div>
+          </div>
+          <div class="item__specs">
+            <div class="spec">
+              <span class="spec__title">Size</span>
+              <div class="spec__value">48 - L</div>
+            </div>
+            <div class="spec">
+              <span class="spec__title">QT</span>
+              <div class="spec__value">2 pcs</div>
+            </div>
+          </div>
+          <img
+            src="https://picsum.photos/200/300"
+            alt="random_photo"
+            class="item__photo"
+          />
+        </article>
+      </section>
     </div>
-    <div class="bar">
-      <span class="vertical-text">LOCATIONS*MENU*SHOP</span>
-    </div>
-
-    <main>
-      <div>
-        <img
-          src="https://images.unsplash.com/photo-1728044993522-3f86976398fd?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        />
-      </div>
-      <div>
-        <img
-          src="https://images.unsplash.com/photo-1731688687812-db09e24f2384?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        />
-      </div>
-      <div>CURRY<br />CAFE</div>
-    </main>
-
-    <div class="bar">
-      <span class="vertical-text"># ORDER T-A #</span>
-    </div>
-    <div class="bar">
-      <span class="rotated-text">SPICY NEWSLETTER</span>
-    </div>
-    <div class="bar">
-      <span class="vertical-text">* RESERVATIONS *</span>
-    </div>
-    <div class="bar">
-      <span class="vertical-logo"
-        ><i class="fa-brands fa-square-facebook"></i
-        ><i class="fa-brands fa-square-instagram"></i
-      ></span>
-    </div>
-    <div class="bar" class="bottom-bar">
-      <span class="scrolling-text"
-        >STAY SPICY - NUMBER ONE BEST QUALITY! EVERY DAY OPEN! FLEMINGTON &
-        NORTHCOTE! HOME DELIVERY ~ NUMBER ONE BEST QUALITY! STAY SPICY - NUMBER
-        ONE BEST QUALITY! EVERY DAY OPEN! FLEMINGTON & NORTHCOTE! HOME DELIVERY
-        ~ NUMBER ONE BEST QUALITY! STAY SPICY - NUMBER ONE BEST QUALITY! EVERY
-        DAY OPEN! FLEMINGTON & NORTHCOTE! HOME DELIVERY ~ NUMBER ONE BEST
-        QUALITY! STAY SPICY - NUMBER ONE BEST QUALITY! EVERY DAY OPEN!
-        FLEMINGTON & NORTHCOTE! HOME DELIVERY ~ NUMBER ONE BEST QUALITY! STAY
-        SPICY - NUMBER ONE BEST QUALITY! EVERY DAY OPEN! FLEMINGTON & NORTHCOTE!
-        HOME DELIVERY ~ NUMBER ONE BEST QUALITY! STAY SPICY - NUMBER ONE BEST
-        QUALITY! EVERY DAY OPEN! FLEMINGTON & NORTHCOTE! HOME DELIVERY ~ NUMBER
-        ONE BEST QUALITY!
-      </span>
-    </div>
-    <div class="message"><i class="fa-solid fa-message"></i></div>
-    <script
-      src="https://kit.fontawesome.com/1120a877b7.js"
-      crossorigin="anonymous"
-    ></script>
   </body>
 </html>
